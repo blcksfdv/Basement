@@ -8,7 +8,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 export function Header() {
-  const { theme, setTheme } = useTheme();
+
   const [isMounted, setIsMounted] = useState(false);
 
   const Header = [
@@ -26,16 +26,7 @@ export function Header() {
     },
   ];
 
-  useEffect(() => {
-    setIsMounted(true);
-    setTheme("dark");
-  }, []);
 
-  const ChangeToDarkMood = () => {
-    if (isMounted) {
-      setTheme(theme === "light" ? "dark" : "light");
-    }
-  };
 
   return (
     <Popover className="w-full  border-b  dark:border-secondary-dark">

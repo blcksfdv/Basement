@@ -32,18 +32,18 @@ export function Mint() {
           The Basement
         </h1>
         <h1 className="mt-[-1rem] md:mt-0 md:pt-[2px] capitalize text-3xl leading-loose	 font-extrabold md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-          Dwellers' Genesis
+         {` Dwellers' Genesis`}
         </h1>
       </div>
 
       <p className="py-2 text-white">
-        To celebrate all of you fine people for getting us to 15,000
-        subscribers, we have an official NFT Drop available just to you!
+       {` To celebrate all of you fine people for getting us to 15,000
+        subscribers, we have an official NFT Drop available just to you!`}
       </p>
 
       <div className="py-2 flex flex-col gap-y-2 ">
         <p className="p_tag">
-          Price per NFT: Free to Claim (user has to pay txn fee to claim)
+       {` Price per NFT: Free to Claim (user has to pay txn fee to claim)`}
         </p>
         <p className="p_tag">Max mint per wallet: 1 per wallet</p>
         <p className="p_tag">Secondary Sale Royalty: 2.5%</p>
