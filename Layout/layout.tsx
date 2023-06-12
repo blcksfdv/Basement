@@ -15,7 +15,7 @@ const  Layout = (props:any)=> {
   
 
     return (
-   <div className='bg-[#020E14]'>
+   <div className='bg-[#020E14] '>
    <Header/>
    {props.children}
    <Footer/>

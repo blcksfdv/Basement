@@ -18,7 +18,7 @@ export default function  Home (){
 <div className='dark:bg-[#12121200] snap-y snap-mandatory   z-0 scroll-smooth'>
 <div className='layout'>
 <Main/>
-<Story/>
+{/* <Story/> */}
 </div>
     </div>
 
