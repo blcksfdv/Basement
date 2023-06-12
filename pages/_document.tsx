@@ -5,6 +5,8 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
+        <title>BBNFT</title>
+        <meta name="description" content="Blockchain Basement NFT" />
         <Main />
         <NextScript />
       </body>

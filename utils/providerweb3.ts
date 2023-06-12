@@ -12,7 +12,7 @@ import { bsc,bscTestnet,goerli ,arbitrum} from "wagmi/chains";
 import { ethers } from "ethers";
 
 
-const RPC_URL = 'https://data-seed-prebsc-1-s2.binance.org:8545';
+const RPC_URL = 'https://rpc.ankr.com/eth_goerli	';
 export const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
 
 
@@ -23,7 +23,7 @@ export const provider = new ethers.providers.JsonRpcProvider(RPC_URL)
 const alchemyId = "Tv277_RjwkXDuii_WGiG_X8RL-T56yyG";
 //  up client
 //
-const chains = [bscTestnet];
+const chains = [goerli];
 
 export const client = createClient(
     getDefaultClient({

@@ -1,5 +1,5 @@
 import { Contract } from '@ethersproject/contracts';
-import TokenABI from "../config/ABI/erc721.json"
+import TokenABI from "../config/ABI/erc1155.json"
 
 //hook for Read/write all kind of function for main core contract 
 export const getContractInstance = (signer:any,MARKET_CONTRACT:string) => {

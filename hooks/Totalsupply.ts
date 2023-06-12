@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { ethers } from "ethers";
-import ercabi from "../config/ABI/erc721.json";
+import ercabi from "../config/ABI/erc1155.json";
 import { provider } from "../utils/providerweb3";
 import { NFT_CONTRACT } from "../config";
 

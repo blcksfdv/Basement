@@ -17,7 +17,7 @@ export const VideoComponent = () => {
 
   return (
     <div className="relative p-2 md:p-16">
-      <video          className="w-full h-auto rounded-lg shadow"
+      <video          className="w-full h-auto rounded-2xl shadow"
  ref={videoRef} playsInline loop muted>
         <source src="/Video/download.mp4" type="video/mp4" />
         {/* Add additional source tags for different video formats if needed */}
