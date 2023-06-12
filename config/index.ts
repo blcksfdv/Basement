@@ -1,10 +1,10 @@
-export const NFT_CONTRACT = "0xb413df01580659F671471956e9D2fAe989d1dcd3"
+export const NFT_CONTRACT = "0x2C70f96e3E54B8F884A17127E0594a4E8117D2b9"
 
 
 
 export const baseURI  = "ipfs://QmRpPDqwVn1EaHgp4tbmQ5XHtDrrbhv3ssetLfHRLC2ocY/"
 
-
+export const tokenID= 0;
 export const currency = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";
 export const _pricePerToken = 0;
 export const pricePerToken = 0;

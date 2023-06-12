@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import useDirectCall from "../../hooks/useTransation";
 import { useAppSelector, useAppdispatch } from "../../hooks/redux";
 import { ConnectButtonwagmi } from "../Header/connect";
-import { NFT_CONTRACT, baseURI ,_allowlistProof,currency,_pricePerToken,quantityLimitPerWallet} from "../../config";
+import { NFT_CONTRACT, baseURI ,_allowlistProof,currency,_pricePerToken,quantityLimitPerWallet,tokenID} from "../../config";
 import { useAccount, useSigner } from "wagmi";
 import { fetchTotalMint } from "../../hooks/Totalsupply";
 import { toast } from "react-hot-toast";
@@ -25,6 +25,7 @@ export function Mint() {
   const Mintnft = async () => {
     const parms = [
       address,
+      tokenID,
       1,
       currency,
       _pricePerToken,
@@ -32,11 +33,11 @@ export function Mint() {
       "0x",
     ];
 
-    const limit = await Checklimit("getSupplyClaimedByWallet", [0, address]);
+    const limit = await Checklimit("getSupplyClaimedByWallet", [tokenID,0, address]);
     const Mintleft =Number(limit);
     console.log(Mintleft);
     
-    if(Mintleft<=quantityLimitPerWallet){
+    if(Mintleft<quantityLimitPerWallet){
       BuyToken("claim",parms);
     }else{
       toast.error("You already minted");
