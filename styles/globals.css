@@ -9,9 +9,9 @@ body{
 
 }
 
-@font-face {
-	font-family: 'Source Sans Pro';
-  src: url('path/to/source-sans-pro-regular.otf');
+@font-face {font-family: "MinecraftRegular";
+	src: url("../public/fonts/1_Minecraft-Regular.otf");
+
   }
 
   
