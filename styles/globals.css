@@ -11,7 +11,7 @@ body{
 
 @font-face {
 	font-family: 'Source Sans Pro';
-  src: url('path/to/source-sans-pro-regular.ttf') format('truetype');
+  src: url('path/to/source-sans-pro-regular.otf');
   }
 
   
