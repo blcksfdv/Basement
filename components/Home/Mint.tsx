@@ -3,7 +3,15 @@ import React, { useEffect, useState } from "react";
 import useDirectCall from "../../hooks/useTransation";
 import { useAppSelector, useAppdispatch } from "../../hooks/redux";
 import { ConnectButtonwagmi } from "../Header/connect";
-import { NFT_CONTRACT, baseURI ,_allowlistProof,currency,_pricePerToken,quantityLimitPerWallet,tokenID} from "../../config";
+import {
+  NFT_CONTRACT,
+  baseURI,
+  _allowlistProof,
+  currency,
+  _pricePerToken,
+  quantityLimitPerWallet,
+  tokenID,
+} from "../../config";
 import { useAccount, useSigner } from "wagmi";
 import { fetchTotalMint } from "../../hooks/Totalsupply";
 import { toast } from "react-hot-toast";
@@ -19,9 +27,6 @@ export function Mint() {
     setload(true);
   }, []);
 
-
-
-
   const Mintnft = async () => {
     const parms = [
       address,
@@ -33,17 +38,20 @@ export function Mint() {
       "0x",
     ];
 
-    const limit = await Checklimit("getSupplyClaimedByWallet", [tokenID,0, address]);
-    const Mintleft =Number(limit);
+    const limit = await Checklimit("getSupplyClaimedByWallet", [
+      tokenID,
+      0,
+      address,
+    ]);
+    const Mintleft = Number(limit);
     console.log(Mintleft);
-    
-    if(Mintleft<quantityLimitPerWallet){
-      BuyToken("claim",parms);
-    }else{
+
+    if (Mintleft < quantityLimitPerWallet) {
+      BuyToken("claim", parms);
+    } else {
       toast.error("You already minted");
     }
   };
-
 
   useEffect(() => {
     dispatch(fetchTotalMint());
@@ -66,9 +74,7 @@ export function Mint() {
       </p>
 
       <div className="py-2 flex flex-col gap-y-2 ">
-        <p className="p_tag">
-          {`Free + Transaction fee to Claim! `}
-        </p>
+        <p className="p_tag">{`Free + Transaction fee to Claim! `}</p>
         <p className="p_tag">Max mint per wallet: 1 per wallet</p>
         <p className="p_tag">Secondary Sale Royalty: 2.5%</p>
         <h2 className="text-4xl font-extrabold py-4 text-white">
