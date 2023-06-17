@@ -1,9 +1,7 @@
-export const NFT_CONTRACT = "0x2C70f96e3E54B8F884A17127E0594a4E8117D2b9"
-
-
-
+import { bsc,bscTestnet,goerli ,arbitrum,mainnet} from "wagmi/chains";
+//test net -> 0x2C70f96e3E54B8F884A17127E0594a4E8117D2b9
+export const NFT_CONTRACT = "0xCa91cD9dB50002427C0280F3482EFbb33B822429"
 export const baseURI  = "ipfs://QmRpPDqwVn1EaHgp4tbmQ5XHtDrrbhv3ssetLfHRLC2ocY/"
-
 export const tokenID= 0;
 export const currency = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";
 export const _pricePerToken = 0;
@@ -18,3 +16,11 @@ quantityLimitPerWallet: quantityLimitPerWallet,
 pricePerToken: 0,
 currency:currency
 };
+
+
+export const chianRPC = {
+    goerli:"https://rpc.ankr.com/eth_goerli",
+    eth:"https://eth-mainnet.g.alchemy.com/v2/VEX4K9WybpzqhfnpF_DhNw2LVyrm6jdP"
+  }
+export const chianIDRPC =  chianRPC.eth
+export  const chains = [mainnet];

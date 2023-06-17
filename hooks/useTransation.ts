@@ -7,16 +7,15 @@ import { provider } from "../utils/providerweb3";
 
 const useDirectCall = (signer: any, contractaddress: string) => {
   const [loading, setSellTokenLoading] = useState(false);
-   
 
-  const Checklimit = async ( fname: string,args: Array<any>) => {
+  const Checklimit = async (fname: string, args: Array<any>) => {
     const name = String(fname);
     //coming from hook
-    const myContract = await getContractInstance(signer,contractaddress);
+    const myContract = await getContractInstance(signer, contractaddress);
     try {
       const response = await myContract?.[name](...args);
       console.log(response);
-      
+
       return response;
     } catch (error) {
       //failed
@@ -24,8 +23,7 @@ const useDirectCall = (signer: any, contractaddress: string) => {
     }
   };
 
-
-  const BuyToken = async (fname: string,args: Array<any>) => {
+  const BuyToken = async (fname: string, args: Array<any>) => {
     const name = String(fname);
     setSellTokenLoading(true);
 
@@ -45,7 +43,7 @@ const useDirectCall = (signer: any, contractaddress: string) => {
     }
   };
 
-  return { loading, BuyToken ,Checklimit};
+  return { loading, BuyToken, Checklimit };
 };
 
 export default useDirectCall;
