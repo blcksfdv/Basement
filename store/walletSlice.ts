@@ -1,7 +1,5 @@
 import axios from "axios";
-import { createSlice, createAsyncThunk ,PayloadAction} from "@reduxjs/toolkit";
-import { useQuery } from "@apollo/client";
-import gql from "graphql-tag";
+import { createSlice, createAsyncThunk ,PayloadAction} from "@reduxjs/toolkit";;
 import {fetchTotalMint} from "../hooks/Totalsupply"
 interface PoolsState {
 isRender:boolean,
